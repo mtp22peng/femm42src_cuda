@@ -1,0 +1,1 @@
+https://stackoverflow.com/questions/10438770/how-to-use-functions-from-different-c-projects-in-visual-studio-2010
