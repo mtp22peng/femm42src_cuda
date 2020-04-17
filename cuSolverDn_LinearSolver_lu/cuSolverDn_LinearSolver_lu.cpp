@@ -71,8 +71,6 @@
 
 
 
-BOOL GaussSolve_lu(int, double **, double *, double *);
-
 void printMatrix(int m, int n, const double*A, int lda, const char* name)
 {
 	for (int row = 0; row < m; row++) {
@@ -83,6 +81,18 @@ void printMatrix(int m, int n, const double*A, int lda, const char* name)
 	}
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////
+/// <summary>	Gauss solve lu. </summary>
+///
+/// <remarks>	, 2020/4/9. </remarks>
+///
+/// <param name="m">	An int to process. </param>
+/// <param name="M">	[in,out] If non-null, a double to process. </param>
+/// <param name="B">	[in,out] If non-null, a double to process. </param>
+/// <param name="X">	[in,out] If non-null, a double to process. </param>
+///
+/// <returns>	True if it succeeds, false if it fails. </returns>
+////////////////////////////////////////////////////////////////////////////////////////////////////
 
 BOOL GaussSolve_lu(int m, double **M, double *B, double* X)
 {

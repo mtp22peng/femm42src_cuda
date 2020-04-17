@@ -5,6 +5,8 @@
 
 #include"F:\\femm42src_cuda\\cuSolverDn_LinearSolver_lu\\header1.h"
 
+
+
 #pragma comment(lib,"cuSolverDn_LinearSolver.lib")
 
 

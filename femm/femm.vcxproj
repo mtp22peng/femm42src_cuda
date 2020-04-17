@@ -526,7 +526,7 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>..\liblua\x64\Debug\liblua.lib;..\ResizableLib\x64\debug\ResizableLib.lib;cudart.lib;cusolver.lib;cublas.lib;cuda.lib;cusparse.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>..\liblua\x64\Debug\liblua.lib;..\ResizableLib\x64\debug\ResizableLib.lib;cudart.lib;cusolver.lib;cublas.lib;cuda.lib;cusparse.lib;cuSolverDn_LinearSolver.lib;cuSolverSp_LinearSolver.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\Debug64/femm.exe</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <GenerateDebugInformation>true</GenerateDebugInformation>

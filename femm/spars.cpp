@@ -4,6 +4,15 @@
 #include <stdlib.h>
 #include "spars.h"
 
+#include"F:\\femm42src_cuda\\cuSolverSp_LinearSolver_lu\\Header.h"
+
+
+
+#pragma comment(lib,"cuSolverSp_LinearSolver.lib")
+
+
+
+
 CEntry::CEntry()
 {
 	next=NULL;
@@ -188,6 +197,7 @@ int CBigLinProb::PCGSolve(int flag)
 	double res,res_o,res_new;
 	double er,del,rho,pAp;
 
+
 	// quick check for most obvious sign of singularity;
 	for(i=0;i<n;i++) if(M[i]->x==0){
 		fprintf(stderr,"singular flag tripped.");
@@ -201,6 +211,24 @@ int CBigLinProb::PCGSolve(int flag)
 	}
 	int prg1=0;
 	int prg2;
+
+
+
+	// convert Centry to normal entry for matrix M
+
+
+
+	// convert dense to sparse form
+	
+	// call the sparse solver (cuda)
+
+	double* X = new double[n];
+	double** MM;
+	SparseSolve_lu(n, MM, b, X);
+
+
+
+
 
 	// Best guess for relaxation parameter
 	Lambda=1.5;
